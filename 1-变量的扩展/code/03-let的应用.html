@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		ul li {
+			height: 30px;
+			margin: 10px 0;
+			background: #000;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+
+
+	<script>
+		let liList = document.querySelectorAll('ul li');
+
+		// 没有闭包
+		/*for(var i = 0; i < liList.length; i++) {
+			liList[i].onclick = function() {
+				alert(this.index);
+			};
+		}*/
+
+		// 闭包
+		for(let i = 0; i < liList.length; i++) {
+			liList[i].onclick = function() {
+				alert(i);
+			};
+		}
+	</script>
+
+
+
+
+
+
+
+</body>
+</html>

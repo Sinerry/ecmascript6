@@ -1,0 +1,27 @@
+问题与思考：
+1. var的缺点有哪些？
+2. let，const有什么特点？
+3. const定义的数组能push，pop，splice，reverse，sort吗？
+   const定义的对象能增删改查吗？
+   const arr = [1,2];
+
+
+   '1' === '1'  true
+
+   [] === []  false
+
+4. alert([] === []);// false
+   alert({a:1} === {a:1});// false
+   
+   结果是什么，为什么？
+
+
+
+
+
+
+
+
+
+
+

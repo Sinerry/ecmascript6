@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>	
+	<script>
+		const arr = [1,2];
+		arr.push(99);
+		//console.log(arr);
+
+		const obj = {
+			name: '大锤',
+			age: 18
+		};
+		obj.name = '狗蛋';
+		//console.log(obj);
+
+
+
+
+		let arr1 = new Array(4,3);
+		let arr2 = arr1;
+		arr2.push(2);
+		console.log(arr2);
+		console.log(arr1);
+
+		const obj1 = {name:'rose'};
+		const obj2 = obj1;
+		obj2.name = 'jack';
+		console.log(obj2);
+		console.log(obj1);
+
+		// let a = 'abc';
+		// let b = a;
+		// b = 'def';
+		// console.log(b);// 'def'
+		// console.log(a);// 'abc'
+
+
+
+
+
+
+		/*
+			js划分数据类型：
+				1. 基本数据类型：值传递，在赋值的时候，会将自己复制一份
+					undefined
+					number
+					string
+					boolean
+					null
+				2. 引用数据类型：
+				栈引用了堆内存的地址，地址的传递，在赋值的时候，会将自己的内存地址传递出去，
+					object
+					function
+			
+			区别：取决于在计算机中存储的地方不同 
+
+
+			计算机内存模型：
+				栈：存放所有的变量名，函数，
+
+				堆：存放引用数据类型的内存地址
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		*/
+
+
+		let a = 'a';
+		let b = a;
+		b = 'd';
+		console.log(b);
+		console.log(a);
+
+
+
+
+
+
+	</script>
+</body>
+</html>
