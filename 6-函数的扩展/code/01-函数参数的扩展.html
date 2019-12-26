@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<a href="www.xxx.com">a</a>
+	<script>
+		// function fn(a) {
+		// 	a = a || 1;
+		// 	console.log(a);
+		// }
+
+		// fn(null);
+
+		// function fn(a=1) {
+		// 	console.log(a);
+		// }
+		// fn(null);
+
+
+
+		// es5
+		// function add() {
+		// 	let sum = 0;
+		// 	for(var i = 0; i < arguments.length; i++) {
+		// 		sum += arguments[i];
+		// 	}
+		// 	return sum;
+		// }
+
+
+		// console.log(add(1,2));// 3
+		// console.log(add(1,2,3));// 6
+		// console.log(add(11,22,33,44));// 110
+		// console.log(add(1,2,3,4,5,6,7,8,9,10));// 55 
+
+
+
+		// function add(...args) {
+		// 	let sum = 0;
+		// 	for(let i = 0; i < args.length; i++) {
+		// 		sum += args[i];
+		// 	}
+		// 	return sum;
+		// }
+		// console.log(add(3,4));// 7
+		// console.log(add(3,4,5,6,7,8,9));// 42
+
+		function attr(el,...args) {
+			if(args.length === 1) {
+				if(typeof args[0] === 'string') {
+					return el.getAttribute(args[0]);
+				}else if(typeof args[0] === 'object') {
+					for(let k in args[0]) {
+						el.setAttribute(k,args[0][k]);
+					}
+				}
+			}else if(args.length === 2) {
+				el[args[0]] = args[1];
+			}
+		}
+
+
+
+		// attr(el,'width')
+
+		// attr(el,'width',100)
+
+		// attr(el,{
+		// 	width: 200,
+		// 	height: 100,
+		// 	background: 'red'
+		// })
+
+
+		// let oA = document.querySelector('a');
+		// // console.log(attr(oA,'href','https://www.baidu.com'));
+
+		// attr(oA,{
+		// 	goudan: 'dachui',
+		// 	index: '1'
+		// })
+
+		// function fn(x=1,y=2) {
+		// 	return x + y;
+		// }
+		// console.log(fn()); 
+		/*		
+			此时x，y都没有传实际参数，x，y都会走默认值
+			x取1，y取2
+			结果打印 3
+		*/
+		// console.log(fn(5)); 
+		/*		
+			此时只传了一个实参5，这个5会给x赋值，y没有传参，所以y取默认值2，
+			结果 5 + 2 ，打印7
+		*/
+
+		// console.log(fn(3,4)); 
+		/*		
+			此时都传了参数，所以x，y都会重新赋值，x赋值为3，y赋值为4，
+			结果是 3 + 4，打印7
+		*/
+
+
+
+
+
+
+		// function add(...args) {
+  // 			console.log(x,y,args);// 1,2,[3,4]
+		// }
+		// add(1,2);
+
+
+		// add(1,2,3,4);
+
+
+		// add(5,4,3,2,1);
+
+
+		// function add(...args) {
+  // 			console.log(...args);
+		// }
+
+		// add(18,21,13,42,7,26);
+
+
+		function getMaxAndMin(...args) {
+			return {
+				max: Math.max(...args),
+				min: Math.min(...args)
+			};
+		}
+		console.log(getMaxAndMin(18,21,13,42,7,26));
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
