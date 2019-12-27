@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// let goudan = '大锤';
+		// let obj = {
+		// 	goudan: '狗蛋',
+		// 	fn: () => {
+		// 		console.log(this);// window，不再是obj了
+		// 	}
+		// };
+
+		// obj.fn();
+
+
+		// let fn = obj.fn;
+		// fn();
+
+
+		/*var a = 0;
+		let obj = {
+			a: 1,
+			b: function() {
+				alert(this.a++);
+			}
+		};
+		obj.b();// 1
+		alert(obj.a);// 2
+		let b = function() {
+			alert(this.a++);
+		};
+		b();// 0
+		alert(++window.a);// 2
+		alert(a++);// 2
+*/
+
+		/*let a = 0;
+		let obj = {
+			a: 1,
+			b: function() {
+				alert(++this.a);
+			}
+		};
+		obj.b();
+		alert(obj.a);
+		let b = obj.b;
+		b();// NaN
+		alert(++window.a);// NaN
+		alert(a++);// 0
+*/
+
+
+		// console.log(1);
+		// setTimeout(function() {
+		// 	console.log(2);
+		// });
+		// console.log(3);
+
+		// 1   3   2
+
+	
+
+
+		// var a = 0;
+		// let obj = {
+		// 	a: 1,
+		// 	b: function() {
+		// 		console.log(++this.a);
+		// 		setTimeout(function() {
+		// 			console.log(this.a++);
+		// 		});
+		// 	}
+		// };
+		// obj.b();
+		// console.log(obj.a);
+		// let b = obj.b;
+		// b();
+		// console.log(++window.a);
+		// console.log(a++);
+		// 2,2,1,  2,2,3,4
+
+
+		/*		
+			1. this
+
+			2. 异步
+		*/
+
+
+
+		let a = 0;
+		let obj = {
+			a: 1,
+			b: () => {
+				console.log(++this.a);// NaN
+				setTimeout(()=> {
+					console.log(this.a++);//NaN 
+				});
+			}
+		};
+		obj.b();
+		console.log(obj.a);// 1
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+课堂练习：
+1. 下列每次弹窗是什么？
+var x = 1;
+const OBJ = {
+	x: 2,
+	fn: function() {
+		alert(x);
+		alert(this.x++);
+	}
+};
+OBJ.fn();
+alert(OBJ.x);
+let fn = OBJ.fn();
+alert(++window.x);
+alert(x);
+
+
+2. 
+var x = 1;
+const OBJ = {
+	x: 2,
+	fn: function() {
+		alert(x);
+		alert(this.x++);
+		setTimeout(function() {
+			alert(x);
+			alert(++this.x);
+		});
+		alert(this.x);
+	}
+};
+OBJ.fn();
+alert(OBJ.x);
+
+3.
+var x = 1;
+const OBJ = {
+	x: 2,
+	fn: function() {
+		alert(x);
+		alert(this.x++);
+		setTimeout(() => {
+			alert(x);
+			alert(++this.x);
+		});
+		alert(this.x);
+	}
+};
+OBJ.fn();
+alert(OBJ.x);
+
+4. 
+let x = 1;
+const OBJ = {
+	x: 2,
+	fn: function() {
+		alert(x);
+		alert(this.x++);
+		setTimeout(() => {
+			alert(x);
+			alert(++this.x);
+		});
+		alert(this.x);
+	}
+};
+OBJ.fn();
+alert(OBJ.x);
+
+
+5. forEach对两个数组[10,9,8,7,6,5,4,3,2,1]，[1,2,3,4,5,6,7,8,9,10]求和
+
+
+6. 由数组[1,2,3,4]如何得到[1,4,27,256]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button id="btn">按钮</button>
+	<script>
+		function fn() {
+			console.log(this);// window
+		}
+
+
+		window.fn();
+
+		// let obj = {
+		// 	fn:function() {
+		// 		console.log(this); // obj
+		// 	}
+		// }
+
+		// obj.fn();
+		let oBtn = document.getElementById('btn');
+		oBtn.onclick = function() {
+			console.log(this);// oBtn
+		};
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
