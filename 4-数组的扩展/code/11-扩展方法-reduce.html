@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// let array = [1,2,3,4,5];
+		// let sum = array.reduce((current,next) => current + next);
+		// console.log(sum);
+
+		// let array = [1,2,3,4,5];
+		// let sum = array.reduce((current,next) => {
+		// 	return current + next;
+		// },0);
+		// console.log(`sum = ${sum}`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		// array.reduce(function(){},init)
+
+
+
+		// let array = ['html','html','css','vue','html'];
+		
+		// let obj = array.reduce((init,next) => {
+		// 	init[next] = ++init[next] || 1;
+		// 	return init;
+		// },{});
+
+
+		// console.log(obj);
+
+
+
+		const GOODS = [
+			{
+				id: 1,
+				name: "酸奶",
+				unit: 13.8,
+				count: 4
+			},{
+				id: 2,
+				name: "苹果",
+				unit: 5.98,
+				count: 4
+			},{
+				id: 3,
+				name: "辣条",
+				unit: 3.5,
+				count: 2
+			},{
+				id: 4,
+				name: "可口可乐",
+				unit: 7,
+				count: 1
+			}
+		];
+		// 总价 
+		let total = GOODS.reduce((init,next) => {
+			return init + next.unit * next.count;
+		},0);
+		// 总数量
+		let num = GOODS.reduce((init,next)=> {
+			return init + next.count;
+		},0)
+		console.log(`total = ${total},num = ${num}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
