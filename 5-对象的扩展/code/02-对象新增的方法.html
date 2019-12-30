@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// is
+		// console.log(Object.is(1,'1'));// false
+		// console.log(Object.is(1,1));// true
+		// console.log(Object.is([],[]));
+		// console.log(Object.is(NaN,NaN));// true
+		// console.log(NaN === NaN);// false
+
+
+
+
+
+		// assign
+
+		// let obj1 = {a:1,b:2};
+		// let obj2 = {c:3,d:4};
+		// let obj3 = {e:5,f:6};
+		// let ret = Object.assign(obj1,obj2,obj3);
+		// console.log(ret === obj1);
+
+
+		let obj1 = {};
+		let obj2 = {
+				name:'哈哈',
+				age:18, 
+				x: {
+					y: 1
+				}
+			};
+		// 浅拷贝，不能实现深拷贝
+		// Object.assign(obj1,obj2);
+		// obj1.x.y = 99;
+
+		// // console.log(obj1);
+		// console.log(obj2);
+
+
+
+		let obj = {x:1,y:2,z:3};
+
+		// Object.keys(obj).forEach(k => {
+		// 	console.log(obj[k]);
+		// });
+
+		// let obj = {x:1,y:2,z:3};
+		// console.log(Object.values(obj));
+
+		let obj = {x:1,y:2,z:3};
+		console.log(Object.entries(obj));
+		// [['x',1],['y',2],['z',3]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

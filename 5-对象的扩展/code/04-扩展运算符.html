@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul>
+		<li>a</li>
+		<li>b</li>
+		<li>c</li>
+		<li>d</li>
+	</ul>
+	<script>
+		let array1 = [55,44,33,22];
+		// 数组的复制
+		let array2 = [...array1];
+		array2.push(11);
+		console.log(array2);
+		console.log(array1);
+
+
+
+
+		// let a = array[0];
+		// let list = array.slice(1);
+		// console.log(a,list);
+
+
+		//let [a,...list] = [55,44,33,22]
+		//console.log(a,list);
+
+		let liList = document.querySelectorAll('ul li');
+
+		console.log([...liList])
+
+
+
+
+
+
+	</script>
+</body>
+</html>
