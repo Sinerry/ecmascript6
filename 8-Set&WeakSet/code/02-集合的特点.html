@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		//let set = new Set([1,1,1,2,2,3,3,4]);
+		// 唯一性
+		// console.log(set);//  {1, 2, 3, 4}
+		// // 无序性
+		// console.log(set[0]);// undefined
+		// console.log(set[1]);// undefined
+		// console.log(set[2]);// undefined
+
+
+
+
+
+		let arr = [];
+		arr.push(1);
+		arr.push(2);
+		arr.push(3);
+		arr.push(4);
+		arr.push(5);
+
+		// for(let item of arr) {
+		// 	console.log(item);
+		// }
+
+
+		// let s = 'ecmascript6';
+		// for(let item of s) {
+		// 	console.log(item);
+		// }
+
+
+
+		// let set = new Set([1,2,3,4,5]);
+
+		// console.log(set.keys());//SetIterator {1, 2, 3, 4, 5}
+		// console.log(set.values());//SetIterator {1, 2, 3, 4, 5}
+		// console.log(set.entries());// 
+		// for(let item of [1,2,3,4,5]) {
+		// 	if(!set.has(item)) {
+		// 		item.add(item);
+		// 	}
+		// }
+		//console.log(set);//  {1,2,3,4,5}
+
+
+
+		let name = 'web';
+     	let age = 10;
+     	let str = '你好，${name} 已经 ${age}岁了';
+     	str = str.replace(/\$\{([a-z]+)\}/g,(match,$1) => eval($1));
+     	// console.log(str)
+
+     	// eval： 把传入字符串当作js代码去执行
+     	// console.log(eval('1+2*3/2'));
+     	// eval('alert(1)');
+     	// console.log(eval('name'));
+
+
+
+
+     	let s1 = new Set([1,2,3,4]);
+     	let s2 = new Set([3,4,5,6]);
+
+
+     	// 交集  共同的部分   得到的集合 
+     	let s3 = new Set();
+     	for(let item of s1) {
+     		if(s2.has(item)) {
+     			s3.add(item);
+     		}
+     	}
+     	console.log('交集:',s3);// {3,4}
+
+     	// 并集  集合的合并 
+     	let s4 = new Set([...s1,...s2]);
+     	console.log('并集:',s4);// {1,2,3,4,5,6}
+
+
+     	// 差集
+     	let s5 = new Set();
+     	for(let item of s1) {
+     		if(!s2.has(item)) {
+     			s5.add(item);
+     		}
+     	}
+     	console.log('差集:',s5);// {1,2}
+     	// 补集
+     	let s6 = new Set();
+     	for(let item of s4) {
+     		if(!s3.has(item)) {
+     			s6.add(item);
+     		}
+     	}
+     	console.log('补集:', s6);// {1,2,5,6}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,3 +1,61 @@
 课堂练习: 
+
+下面代码打印什么 
 1.
+let [x,y,z] = [1,2]
+console.log(x,y,z)
 2.
+let [x,y=22,z=33] = [1,2]
+console.log(x,y,z)
+3.
+let [foo,[[bar],baz]] = [1,[[2],3]];
+console.log(foo,bar,baz);
+
+4.
+let {foo:baz} = {foo:"aaa",bar:"bbb"};
+console.log(baz);
+5.
+let {foo,bar,baz='ccc'} = {foo:"aaa",bar:"bbb"};
+console.log(foo,bar,baz);
+
+6. 
+let o1 = {x:1,y:2,z:3}
+let o2 = {x:2,a:true,b:false}
+把o2的属性添加给o1
+
+7. 把o2的属性添加给o1，并且o1的任何属性的变化，不影响o2
+let o1 = {x:1,y:2}
+let o2 = {x:2,a:true,b:{
+	z: 100
+}}
+
+8. 对obj的所有的数组求和
+let obj = {
+	x: [1,2,3],
+	y: [4,5],
+	z: [6,7,8,9,10]
+};
+
+9. 有如下DOM结构:
+<ul>
+	<li>88</li>
+	<li>55</li>
+	<li>77</li>
+	<li>44</li>
+	<li>33</li>
+	<li>66</li>
+</ul>
+根据li的内容对li进行从小到大排序
+
+
+
+
+
+
+
+
+
+
+
+
+

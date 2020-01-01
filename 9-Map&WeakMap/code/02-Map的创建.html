@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// let obj = {
+		// 	name: 'haha',
+		// 	age: 18
+			
+		// };
+
+		// console.log(obj);
+
+
+		let map = new Map();
+
+		
+		map.set('name','大锤');
+		map.set('age',18);
+		map.set('abc','def');
+		map.forEach((v,k) => {
+			console.log(v,k)
+		});
+
+		for(let k of map.keys()) {
+			console.log(k);
+		}
+
+		for(let v of map.values()) {
+			console.log(v);
+		}
+		
+		for(let [k,v] of map.entries()) {
+			console.log(k,v);
+		}
+
+
+		// console.log(map);
+
+
+		// console.log(map.size);// 2
+
+		// console.log(map.get('name1'));
+
+		// let ret = map.delete('a');
+
+		// console.log(map.has('age'));
+
+		// console.log(ret);
+
+		// map.clear();
+		// console.log(map);
+
+
+
+
+
+
+
+
+
+
+		// map.set(key,value)
+
+		// map.set('name','狗蛋');
+		// map.set('age',18);
+		// map.set('sex','male');
+		// map.set(new Date(),'2020-01-01');
+		// map.set(document,'haha');
+		// map.set(undefined,'123');
+		// map.set(true,false);
+		// map.set(function(){},'北京');
+		// map.set([],'数组');
+		// map.set({},'对象');
+		// map.set(/\s+/,'正则');
+		// map.set(1,'数字');
+		// map.set(Symbol(),'独一无二');
+
+
+
+
+
+
+
+
+
+		// console.log(map); 
+
+
+
+
+	</script>
+</body>
+</html>

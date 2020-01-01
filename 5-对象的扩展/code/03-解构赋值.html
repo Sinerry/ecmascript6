@@ -4,49 +4,45 @@
 	<title></title>
 </head>
 <body>	
+	<ul>
+		<li>88</li>
+		<li>55</li>
+		<li>77</li>
+		<li>44</li>
+		<li>33</li>
+		<li>66</li>
+	</ul>
 	<script>
-		let array = [1,2,3];
-		// let a = array[0];
-		// let b = array[1];
-		// let c = array[2];
+		let o1 = {x:1,y:2}
+		let o2 = {x:2,a:true,b:{
+			z: 100
+		}};
 
-		let array = [1,2,3];
-		let [a,b,c] = array;
+		let s = JSON.stringify(o2);
+		Object.assign(o1,JSON.parse(s));
+		o1.b.z = 11;
 
-
-
-		// console.log(a,b,c);
-
-		//let [a,b,c] = array;
-
-		//console.log(a,b,c);
+		console.log(o2);
 
 
 
 
-		let obj = {name:'大锤',age:18,sex:'male'};
-		let {name,age,sex} = obj;
-
-		// let name = obj.name;
-		// let age = obj.age;
-		// let sex = obj.sex;
-
-		let {name,age,sex} = obj;
-
-
-		//console.log(name,age,sex);
-
-		// let {a,b,c} = {1,2,3};
-		// console.log(a,b,c);
+		/*let obj = {
+			x: [1,2,3],
+			y: [4,5],
+			z: [6,7,8,9,10]
+		};
+		let sum = 0;
+		Object.keys(obj).forEach(k => {
+			sum += obj[k].reduce((cur,next) => cur + next)
+		});
+		console.log(`sum = ${sum}`);*/
 
 
-
-
-
-
-
-
-
+		let liList = document.querySelectorAll('ul li');
+		[...liList].sort((li1,li2) => li1.innerText - li2.innerText).forEach(li => {
+			console.log(li.innerText);
+		})
 
 
 

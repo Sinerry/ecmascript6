@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// let set = new Set('world');
+		// console.log(set);
+		// console.log(set.size);// 5
+
+
+
+
+
+		let set = new Set();
+		// 添加
+		set.add('w');
+		set.add('o');
+		set.add('r');
+		set.add('l');
+		set.add('d');
+		// 删除 
+		// console.log(set);
+		// set.delete('w');
+
+		// console.log(set);
+
+		// console.log(set.has('ww'));
+
+		// set.clear();
+
+		// console.log(set);
+
+
+
+		// set.forEach(item => {
+		// 	console.log(item);
+		// });
+
+		console.log(set.keys());
+		console.log(set.values());
+		console.log(set[Symbol.iterator])
+
+		for(let item of set) {
+			console.log(item);
+		}
+
+
+
+
+
+	</script>
+</body>
+</html>
